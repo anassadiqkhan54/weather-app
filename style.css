@@ -1,0 +1,54 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: #dfeaf2;
+  color: #14304a;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+  transition: background 0.4s;
+}
+body.night { background: #1b2a41; color: #e8eef6; }
+
+.app { width: 100%; max-width: 460px; }
+h1 { font-size: 2rem; margin-bottom: 4px; }
+.hint { font-size: 0.9rem; opacity: 0.75; margin-bottom: 16px; }
+
+.search { display: flex; gap: 8px; }
+input {
+  flex: 1; padding: 12px 14px; font-size: 1rem;
+  border: 2px solid #14304a; border-radius: 8px; background: #fff;
+}
+button {
+  padding: 12px 18px; font-size: 1rem; cursor: pointer;
+  background: #14304a; color: #fff; border: 2px solid #14304a; border-radius: 8px;
+}
+button:hover { background: #24507d; }
+input:focus-visible, button:focus-visible { outline: 3px solid #f2a900; outline-offset: 2px; }
+
+.message { min-height: 1.4em; margin: 12px 0; font-size: 0.95rem; }
+.message.error { color: #b3261e; font-weight: bold; }
+body.night .message.error { color: #ff8a80; }
+
+.result { background: rgba(255,255,255,0.65); border-radius: 14px; padding: 20px; }
+body.night .result { background: rgba(255,255,255,0.08); }
+.hidden { display: none; }
+
+.now { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.now h2 { font-size: 1.4rem; }
+.temp { font-size: 3.6rem; font-weight: bold; line-height: 1; }
+.temp span { font-variant-numeric: tabular-nums; }
+
+.details { list-style: none; display: flex; gap: 8px; margin: 18px 0; }
+.details li { flex: 1; display: flex; flex-direction: column; gap: 2px; font-size: 0.85rem; }
+.details strong { font-size: 1.05rem; }
+
+h3 { font-size: 1rem; margin-bottom: 8px; }
+.forecast { list-style: none; }
+.forecast li {
+  display: grid; grid-template-columns: 70px 1fr auto;
+  gap: 8px; padding: 8px 0; border-top: 1px solid rgba(20,48,74,0.2);
+}
+body.night .forecast li { border-color: rgba(255,255,255,0.2); }

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Weather</h1>
+    <p class="hint">Type a "City, Country" like <em>Pakistan, France</em>.</p>
+
+    <div class="search">
+      <input id="cityInput" type="text" placeholder="Search a city" autocomplete="off">
+      <button id="searchBtn">Search</button>
+    </div>
+
+    <p id="message" class="message" role="status"></p>
+
+    <section id="result" class="result hidden">
+      <div class="now">
+        <div>
+          <h2 id="place"></h2>
+          <p id="condition"></p>
+        </div>
+        <div class="temp"><span id="temp"></span>°C</div>
+      </div>
+
+      <ul class="details">
+        <li><span>Feels like</span><strong id="feels"></strong></li>
+        <li><span>Humidity</span><strong id="humidity"></strong></li>
+        <li><span>Wind</span><strong id="wind"></strong></li>
+      </ul>
+
+      <h3>Next 5 days</h3>
+      <ul id="forecast" class="forecast"></ul>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
